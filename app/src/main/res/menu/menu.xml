@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/screen_home"
+        android:icon="@drawable/food_icon"
+        android:title="@string/screen_home_text" />
+
+
+    <item
+        android:id="@+id/screen_profile"
+        android:icon="@drawable/profile_icon"
+        android:title="@string/screen_account_text" />
+
+    <item
+        android:id="@+id/screen_storage"
+        android:icon="@drawable/basket_icon"
+        android:title="@string/screen_basket_text" />
+
+
+</menu>

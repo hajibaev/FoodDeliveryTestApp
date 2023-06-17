@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="control_primary_active">#FD3A69</color><!-- Основной цвет контролов -->
+    <color name="gray">#A5A9B2</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_smoke">#1D2023</color>
+    <color name="cardBackground">#FAF9F9</color>
+    <color name="white_smoke">#F2F3F7</color>
+    <color name="bac_food">#F8F7F5</color>
+<!--    <color name="orange_dark">#E04A17</color>-->
+    <color name="orange_dark">#FF7415</color>
+    <color name="gray_for_bac">#EBECF0</color>
+    <color name="gray_text_color">#8B8C8C</color>
+    <color name="textPage">#504D55</color>
+    <color name="back_ground_chip_color">#FD99AE</color>
+
+
+    <color name="text_color_cheked">#FD3A69</color>
+    <color name="text_default_color">#C3C4C9</color>
+
+    <color name="red_liked_playlist_bg">#FB696B</color>
+
+
+
+</resources>

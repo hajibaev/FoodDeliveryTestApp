@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="card_background" formant="reference|color" />
+
+    <attr name="card_primary_background" formant="reference|color" />
+
+    <attr name="card_gray_background" formant="reference|color" />
+
+    <attr name="text_gray_background" formant="reference|color" />
+
+    <attr name="text_primary_background" formant="reference|color" />
+
+</resources>

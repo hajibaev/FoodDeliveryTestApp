@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/screen_home">
+
+    <fragment
+        android:id="@+id/screen_home"
+        android:name="com.example.fooddeliveryapp.presentation.ui.screen_home.FragmentHomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/action_screen_home_to_foodInfoFragment"
+            app:destination="@id/foodInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_profile"
+        android:name="com.example.fooddeliveryapp.presentation.ui.screen_profile.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/foodInfoFragment"
+        android:name="com.example.fooddeliveryapp.presentation.ui.food_info_screen.FoodInfoFragment"
+        android:label="fragment_food_info"
+        tools:layout="@layout/fragment_food_info">
+        <argument
+            android:name="foodId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_foodInfoFragment_to_screen_storage"
+            app:destination="@id/screen_storage" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/screen_storage"
+        android:name="com.example.fooddeliveryapp.presentation.ui.screen_storage.FragmentStorage"
+        android:label="fragment_storage"
+        tools:layout="@layout/fragment_storage" >
+        <action
+            android:id="@+id/action_screen_storage_to_screen_home"
+            app:destination="@id/screen_home" />
+    </fragment>
+</navigation>
