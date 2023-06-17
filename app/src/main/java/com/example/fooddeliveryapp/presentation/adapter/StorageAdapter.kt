@@ -51,21 +51,21 @@ class StorageAdapter(private val listener: StorageItemClickListener) :
         fun setOnClickListeners(item: FoodUi) = with(binding) {
             plusCount.setOnDownEffectClickListener {
                 item.count += 1
-                observePrice(item.price, item = item, count = item.count - 1)
+                observePrice(price = item.price, item = item, isPlus = true)
             }
 
             minusCount.setOnDownEffectClickListener {
                 item.count -= 1
                 item.totalPrice = item.count * item.price
-                observePrice(item.price, item = item, isPlus = false, count = item.count)
+                observePrice(item.price, item = item, isPlus = false)
                 if (item.count == 0) listener.deleteFood(item.foodId)
             }
         }
 
-        private fun observePrice(price: Int, isPlus: Boolean = true, count: Int, item: FoodUi) =
+        private fun observePrice(price: Int, isPlus: Boolean = true, item: FoodUi) =
             with(binding) {
                 binding.count.text = item.count.toString()
-                listener.observePrice(price, isPlus, count = count)
+                listener.observePrice(price, isPlus)
             }
     }
 }

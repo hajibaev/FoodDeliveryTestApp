@@ -38,24 +38,27 @@ class FragmentStorageViewModel(
         }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
 
-    fun getAllPriceFromBasket() = getAllDishes.value.forEach {
-        _totalPrice.value += it.price
-        _totalCount.value += it.count
+    fun getAllPriceFromBasket() {
+        _totalPrice.value = 0
+        _totalCount.value = 0
+        getAllDishes.value.forEach {
+            _totalPrice.value += it.price
+            _totalCount.value += it.count
+        }
     }
 
-    fun observeTotalPrice(total: Int, isPlus: Boolean, count: Int) {
+    fun observeTotalPrice(total: Int, isPlus: Boolean) {
         if (isPlus) {
             _totalPrice.value += total
-            _totalCount.value += count
+            _totalCount.value += 1
         } else if (!isPlus) {
             _totalPrice.value -= total
-            _totalCount.value -= count
+            _totalCount.value -= 1
         }
     }
 
     fun deleteFoodFromStorage(id: Int) = viewModelScope.launch {
         fetchAllBasketScreenItemsUseCase.invoke(id)
-        _totalCount.value -= 1
     }
 
 }

@@ -71,8 +71,8 @@ class FragmentStorage :
     }
 
 
-    override fun observePrice(totalPrice: Int, isPlus: Boolean, count: Int) {
-        viewModel.observeTotalPrice(totalPrice, isPlus = isPlus, count)
+    override fun observePrice(totalPrice: Int, isPlus: Boolean) {
+        viewModel.observeTotalPrice(totalPrice, isPlus = isPlus)
     }
 
     override fun deleteFood(id: Int) {
